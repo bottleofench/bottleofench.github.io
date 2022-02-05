@@ -8,12 +8,27 @@ body {
 }
 
 .my-nick {
-    margin-top: 2%;
+    margin-top: -1%;
 	color: white;
 	position: relative;
 	font-family: Inter;
 	font-size: 300%;
 	letter-spacing: 0;
+}
+
+.avatar {
+    border-radius: 45%;
+    border: 3px solid;
+	width: 98px;
+    height: 98px;
+    background-image: url(images/image_6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1%;
 }
 
 .info {
