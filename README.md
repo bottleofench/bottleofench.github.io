@@ -1,3 +1,0 @@
-## MIO VanillaRP
-
-### Work in progress...
