@@ -14,11 +14,12 @@ body {
 	font-family: Inter;
 	font-size: 300%;
 	letter-spacing: 0;
+	text-decoration: none;
 }
 
 .avatar {
     border-radius: 45%;
-    border: 3px solid;
+    border: 3px solid #000000;
 	width: 98px;
     height: 98px;
     background-image: url(images/image_6.png);
@@ -32,8 +33,10 @@ body {
 }
 
 .info {
+    text-decoration: none;
+    color: white;
     text-align: center;
-    margin-top: -0.5%;
+    margin-top: 0%;
 	color: white;
 	position: relative;
 	font-family: Inter;
