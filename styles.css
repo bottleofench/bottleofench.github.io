@@ -40,26 +40,10 @@ body {
 	font-size: 150%;
 	letter-spacing: 0;
 }
-.console {
-	width: 85px;
-	height: 85px;
-	background-image: url(images/image_4.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-}
 .telegram {
 	width: 85px;
 	height: 85px;
 	background-image: url(images/image_2.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-}
-.vk {
-	width: 85px;
-	height: 85px;
-	background-image: url(images/image_3.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 1%;
