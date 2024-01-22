@@ -61,6 +61,15 @@ body {
 	font-size: 150%;
 	letter-spacing: 0;
 }
+.mail {
+	width: 85px;
+	height: 85px;
+	background-image: url(images/mail.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 1%;
+	margin-top: 0%;
+}
 .telegram {
 	width: 85px;
 	height: 85px;
