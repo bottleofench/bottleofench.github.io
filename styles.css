@@ -10,7 +10,7 @@
 
 
 html {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -24,12 +24,12 @@ body {
 	color: white;
 	position: relative;
 	font-family: DrukCyr;
-	font-size: 300%;
+	font-size: 275%;
 	letter-spacing: 0;
 }
 
 .middle-text {
-    margin-top: 2%;
+    margin-top: 0.5%;
 	color: white;
 	position: relative;
 	font-family: Gilroy;
@@ -61,48 +61,19 @@ body {
 	font-size: 150%;
 	letter-spacing: 0;
 }
-.mail {
-	width: 85px;
-	height: 85px;
-	background-image: url(images/mail.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-	margin-top: 0%;
-}
 .telegram {
-	width: 85px;
-	height: 85px;
-	background-image: url(images/image_2.png);
+	width: 70px;
+	height: 70px;
+	background-image: url(images/telegram.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 1%;
 	margin-top: 0%;
 }
 .github {
-	width: 85px;
-	height: 85px;
-	background-image: url(images/image_1.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-	margin-top: 0%;
-}
-.spigot {
-	width: 85px;
-	height: 85px;
-	background-image: url(images/image_5.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-	margin-top: 0%;
-}
-
-.realise {
-	border-radius: 30px;
-	width: 100px;
-	height: 100px;
-	background-image: url(images/realise.jpg);
+	width: 70px;
+	height: 70px;
+	background-image: url(images/github.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 1%;
@@ -116,6 +87,16 @@ body {
 	background-image: url(images/lifeline.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 1%;
-	margin-top: 0%;
+	margin: 0.5%;
+	margin-top: -2%;
+}
+
+.image-text {
+	margin-top: -2%;
+	color: white;
+	position: relative;
+	font-family: Gilroy;
+	font-size: 300%;
+	letter-spacing: 0;
+	text-decoration: none
 }
