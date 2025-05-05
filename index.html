@@ -13,7 +13,7 @@
 <div class="my-nick"><p style="text-align: center">bottleofench</p></div>
 <div style="text-align: center">
 	<p class="info">Артём, 18 лет</p>
-	<p class="info" id="animate">Математик</p>
+	<p class="info" id="animate">1</p>
 	<div style="width: 100%;
             display: flex;
             align-items: center;
@@ -35,22 +35,21 @@
 	<p style="text-align: center; font-size: 75%;">Аналог CoreProtect для поддержки <br>кастомных блоков Feather</p>
 </div>
 <script>
-	var data = ['Математик', 'Java-разработчик', 'Плагины для Minecraft любой сложности', 'Люблю математику и Minecraft', 'Взорву интернет своими идеями'];
+	var data = ['Математик', 'Java-разработчик', 'Плагины для Minecraft любой сложности', 'Люблю математику и Minecraft', 'Взорву интернет своими идеями',
+        'Самый главный говнокодер', 'Решаю параметры закрытыми глазами', 'Планиметрия one love', 'Немного знаю Python', 'Фанат Шпиониро Голубини'
+    ];
 
 	const messageElement = document.getElementById('animate');
 	let k = 0
     let text = data[k];
     let animationInProgress = false;
 
-    // Функция для побуквенного появления
     async function showTextLetterByLetter() {
         if (animationInProgress) return;
         animationInProgress = true;
         
-        // Очищаем сообщение
         messageElement.innerHTML = '';
         
-        // Создаем элементы для каждой буквы (изначально невидимые)
         const chars = text.split('').map(char => {
             const span = document.createElement('span');
             span.className = 'char';
@@ -60,26 +59,21 @@
             return span;
         });
 
-        // Анимация появления букв
         for (let i = 0; i < chars.length; i++) {
             await new Promise(resolve => setTimeout(resolve, 75));
             chars[i].style.transition = 'opacity 0.3s';
             chars[i].style.opacity = '1';
         }
 
-        // Ждем 3 секунды перед исчезновением
         await new Promise(resolve => setTimeout(resolve, 2000));
 
-        // Анимация исчезновения букв (в обратном порядке)
         for (let i = chars.length - 1; i >= 0; i--) {
             await new Promise(resolve => setTimeout(resolve, 75));
             chars[i].style.transition = 'opacity 0.3s';
             chars[i].style.opacity = '0';
         }
 
-        // Ждем немного перед возможностью запустить снова
         await new Promise(resolve => setTimeout(resolve, 1000));
-
 		await new Promise(resolve => setTimeout(() => {
 			animationInProgress = false;
 			k += 1;
