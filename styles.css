@@ -92,11 +92,12 @@ body {
 }
 
 .image-text {
-	margin-top: -2%;
+	margin-top: -4%;
+	margin-bottom: -4%;
 	color: white;
 	position: relative;
 	font-family: Gilroy;
-	font-size: 300%;
+	font-size: 200%;
 	letter-spacing: 0;
 	text-decoration: none
 }
