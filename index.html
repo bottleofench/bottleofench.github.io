@@ -84,7 +84,7 @@
 
         await new Promise(resolve => setTimeout(resolve, 2000));
 
-        for (let i = chars.length - 1; i >= 0; i--) {
+        for (let i = 0; i < chars.length; i++) {
             await new Promise(resolve => setTimeout(resolve, 75));
             chars[i].style.transition = 'opacity 0.3s';
             chars[i].style.opacity = '0';
