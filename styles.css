@@ -14,7 +14,6 @@ html {
 }
 
 body {
-    background: linear-gradient(-45deg, #02000A, #020024, #1F004A, #360186);
     background-size: 200% 200%;
     animation: gradient 5s ease infinite;
 	width: 100%;
@@ -73,6 +72,14 @@ body {
 	font-family: Gilroy;
 	font-size: 250%;
 	letter-spacing: 0;
+}
+
+.theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2%;
+    cursor: pointer;
 }
 
 .avatar {

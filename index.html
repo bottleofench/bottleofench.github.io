@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="https://avatars.githubusercontent.com/u/71398923?v=4">
 </head>
-<body>
+<body style="position: relative">
+<img class="theme" src="images/paint-palette-svgrepo-com.svg" alt="" height="100" onclick="random_bg_color();"/>
 <div class="avatar"></div>
 <div class="my-nick"><p style="text-align: center">bottleofench</p></div>
 <div style="text-align: center">
@@ -53,11 +54,13 @@
 </div>
 <script>
 	var data = ['Математик', 'Java-разработчик', 'Плагины для Minecraft любой сложности', 'Люблю математику и Minecraft', 'Взорву интернет своими идеями',
-        'Самый главный говнокодер', 'Решаю параметры закрытыми глазами', 'Планиметрия one love', 'Немного знаю Python', 'Фанат Шпиониро Голубини'
+        'Самый главный говнокодер', 'Решаю параметры закрытыми глазами', 'Планиметрия one love', 'Немного знаю Python', 'Фанат Шпиониро Голубиро', 'Фанат Трипи Тропи', 'Говнокодю мусорку',
+        'Кладезь тупорылых идей', 'Учу детей математике и информатике', 'Разъёбанная психика', 'Придумываю интересные математические задачи', 'Закодил плагин на кастомные механики',
+        'Закодил клон CoreProtect', 'Придумал ЕГЭ по Майнкрафту', 'Невменяемый уебан', 'Кубоёб', '19 🤮🤮🤮'
     ];
 
 	const messageElement = document.getElementById('animate');
-	let k = 0
+	let k = Math.floor(Math.random() * data.length)
     let text = data[k];
     let animationInProgress = false;
 
@@ -93,14 +96,28 @@
         await new Promise(resolve => setTimeout(resolve, 1000));
 		await new Promise(resolve => setTimeout(() => {
 			animationInProgress = false;
-			k += 1;
-			k = k % data.length;
+			//k += 1;
+			//k = k % data.length;
+            k = Math.floor(Math.random() * data.length)
 			text = data[k];
 			showTextLetterByLetter();
 		}, 0));
     }
 
 	showTextLetterByLetter();
+
+    function random_bg_color() {
+        // Construct the RGB color string.
+        var bgColor = "linear-gradient(-"+Math.floor(Math.random() * 90)+"deg, rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "), "+
+        "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "))";
+        // Output the generated color to the console.
+        console.log(bgColor);
+        // Set the background color of the document body to the generated color.
+        document.body.style.background = bgColor;
+    }
+
+    // Call the random_bg_color function to set a random background color.
+    random_bg_color();
 </script>
 </body>
 </html>
