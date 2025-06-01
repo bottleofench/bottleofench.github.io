@@ -63,6 +63,15 @@ body {
 	font-family: DrukCyr;
 	font-size: 275%;
 	letter-spacing: 0;
+    text-shadow: -2px 2px #ef3550,
+               -6px 6px #f48fb1,
+               -10px 10px #7e57c2,
+               -14px 14px #2196f3,
+               -18px 18px #26c6da,
+               -22px 22px #43a047,
+               -26px 26px #eeff41,
+               -30px 30px #f9a825,
+               -34px 34px #ff5722;
 }
 
 .middle-text {
@@ -99,7 +108,7 @@ body {
 
 .info {
     text-align: center;
-    margin-top: -0.5%;
+    margin-top: 0%;
 	color: white;
 	position: relative;
 	font-family: Gilroy;
