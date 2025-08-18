@@ -8,137 +8,38 @@
   src: url("fonts/Gilroy-ExtraBold.otf");
 }
 
-
-html {
-    overflow-x: hidden;
+.text-shadow-custom {
+    color: white;
+    font-family: DrukCyr;
+    text-shadow: -2px 2px #8a2be2,
+               -4px 4px #4b0082,
+               -6px 6px #2e0854,
+               -8px 8px #1a0333,
+               -10px 10px #0d011a;
 }
 
 body {
-    background-size: 200% 200%;
-    animation: gradient 5s ease infinite;
-	width: 100%;
-    height: 100%;
+    background-color: #212529;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-	10% {
-        background-position: 20% 50%;
-    }
-    20% {
-        background-position: 40% 50%;
-    }
-	30% {
-        background-position: 60% 50%;
-    }
-	40% {
-        background-position: 80% 50%;
-    }
-	50% {
-        background-position: 100% 50%;
-    }
-	60% {
-        background-position: 80% 50%;
-    }
-	70% {
-        background-position: 60% 50%;
-    }
-	80% {
-        background-position: 40% 50%;
-    }
-	90% {
-        background-position: 20% 50%;
-    }
-	100% {
-        background-position: 0% 50%;
-    }
+.char {
+    display: inline-block;
+    opacity: 0;
 }
 
-.my-nick {
-    margin-top: -2%;
-	color: white;
-	position: relative;
-	font-family: DrukCyr;
-	font-size: 275%;
-	letter-spacing: 0;
-    text-shadow: -2px 2px #ef3550,
-               -6px 6px #f48fb1,
-               -10px 10px #7e57c2,
-               -14px 14px #2196f3,
-               -18px 18px #26c6da,
-               -22px 22px #43a047,
-               -26px 26px #eeff41,
-               -30px 30px #f9a825,
-               -34px 34px #ff5722;
+.social-icon {
+    border: none !important;
 }
 
-.middle-text {
-    margin-top: 0.5%;
-	color: white;
-	position: relative;
-	font-family: Gilroy;
-	font-size: 250%;
-	letter-spacing: 0;
+.lead, .card-title, .card-text, .text-light, .text-secondary {
+    font-family: 'Gilroy';
 }
 
-.theme {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 2%;
-    cursor: pointer;
+.card.bg-dark {
+    background-color: #343a40 !important;
+    border-color: #495057 !important;
 }
 
-.avatar {
-    border-radius: 0px;
-    border: 0px solid;
-	width: 120px;
-    height: 120px;
-    background-image: url(https://avatars.githubusercontent.com/u/71398923?v=4);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 1%;
-}
-
-.info {
-    text-align: center;
-    margin-top: 0%;
-	color: white;
-	position: relative;
-	font-family: Gilroy;
-	font-size: 150%;
-	letter-spacing: 0;
-}
-.telegram {
-	width: 70px;
-	height: 70px;
-	background-image: url(images/telegram.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-	margin-top: 0%;
-}
-.github {
-	width: 70px;
-	height: 70px;
-	background-image: url(images/github.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1%;
-	margin-top: 0%;
-}
-
-.image-text {
-	color: white;
-	position: relative;
-	font-family: Gilroy;
-	font-size: 200%;
-	letter-spacing: 0;
-	text-decoration: none;
+.card-text.text-secondary {
+    color: #adb5bd !important;
 }
