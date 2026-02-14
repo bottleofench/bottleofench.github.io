@@ -4,70 +4,105 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <title>bottleofench</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/71398923?v=4">
 </head>
-<body class="bg-dark text-light position-relative">
+<body>
 
     <div class="container py-5">
         <div class="row justify-content-center text-center">
             <div class="col-12 col-md-8 col-lg-6">
-                <div class="avatar mx-auto mb-3" style="width: 120px; height: 120px; background-image: url(https://avatars.githubusercontent.com/u/71398923?v=4); background-size: cover; background-repeat: no-repeat; border-radius: 50%;"></div>
+                <!-- Аватар с градиентной рамкой -->
+                <div class="avatar-wrapper mx-auto mb-4">
+                    <div class="avatar" style="background-image: url(https://avatars.githubusercontent.com/u/71398923?v=4);"></div>
+                </div>
 
-                <h1 class="display-4 fw-bold mb-4 text-shadow-custom">bottleofench</h1>
+                <h1 class="display-4 fw-bold mb-3 gradient-text">bottleofench</h1>
 
                 <p class="lead mb-2">Артём, 19 лет</p>
-                <p class="lead mb-4" id="animate">1</p>
+                <p class="lead mb-4 animate-text" id="animate">1</p>
 
+                <!-- Социальные иконки -->
                 <div class="d-flex justify-content-center mb-5">
-                    <a class="btn btn-dark mx-2 social-icon" href="https://github.com/bottleofench" target="_blank" style="background-image: url(images/github.png); background-size: cover; width: 50px; height: 50px;"></a>
-                    <a class="btn btn-dark mx-2 social-icon" href="https://t.me/bottleofench" target="_blank" style="background-image: url(images/telegram.png); background-size: cover; width: 50px; height: 50px;"></a>
+                    <a class="social-icon" href="https://github.com/bottleofench" target="_blank" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a class="social-icon" href="https://t.me/bottleofench" target="_blank" aria-label="Telegram">
+                        <i class="bi bi-telegram"></i>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="row justify-content-center text-center mb-5">
             <div class="col-12 col-md-10 col-lg-8">
-                <h2 class="mb-4 text-light">Мои проекты</h2>
+                <h2 class="mb-4 section-title">Мои проекты</h2>
 
-                <h3 class="mb-3 text-light">Плагины</h3>
-                <div class="row justify-content-center mb-4">
-                    <div class="col-12 col-md-6 mb-3">
-                        <div class="card h-100 shadow bg-dark text-light">
+                <h3 class="mb-3 section-subtitle">Плагины</h3>
+                <div class="row justify-content-center mb-4 g-4">
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 glass-card">
                             <div class="card-body">
-                                <h5 class="card-title text-light">Feather</h5>
-                                <p class="card-text text-secondary">Мега плагин с новыми механиками, <br>блоками и предметами</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-code-square fs-2 me-3 text-primary"></i>
+                                    <h5 class="card-title mb-0">Feather</h5>
+                                </div>
+                                <p class="card-text">Мега плагин с новыми механиками, блоками и предметами</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 mb-3">
-                        <div class="card h-100 shadow bg-dark text-light">
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 glass-card">
                             <div class="card-body">
-                                <h5 class="card-title text-light">FeatherProtect</h5>
-                                <p class="card-text text-secondary">Аналог CoreProtect для поддержки <br>кастомных блоков Feather</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-shield-lock fs-2 me-3 text-primary"></i>
+                                    <h5 class="card-title mb-0">FeatherProtect</h5>
+                                </div>
+                                <p class="card-text">Аналог CoreProtect для поддержки кастомных блоков Feather</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="mb-3 text-light">Всё, что связано с математикой</h3>
-                <div class="mt-3 row justify-content-center">
+                <h3 class="mb-3 section-subtitle">Всё, что связано с математикой</h3>
+                <div class="row justify-content-center g-4">
                     <div class="col-12 col-md-8">
-                        <a href="/files/mathbank.pdf" class="card h-100 shadow bg-dark text-decoration-none text-light d-block" target="_blank">
-                            <div class="card-body">
-                                <h5 class="card-title text-light">Банк задачек по математике</h5>
-                                <p class="card-text text-secondary">Самые отмороженные задачи в мире<br>(Нажмите, чтобы скачать)</p>
+                        <a href="/files/minecraft.pdf" class="card glass-card download-card text-decoration-none" target="_blank">
+                            <div class="card-body d-flex align-items-center">
+                                <i class="bi bi-file-earmark-pdf-fill fs-1 me-3 text-danger"></i>
+                                <div>
+                                    <h5 class="card-title">Математические и физические основы Minecraft</h5>
+                                    <p class="card-text">Устройство Minecraft с точки зрения математики и физики (Нажмите, чтобы скачать)</p>
+                                </div>
                             </div>
                         </a>
                     </div>
-                </div>
-                <div class="mt-3 row justify-content-center">
                     <div class="col-12 col-md-8">
-                        <a href="/files/minecraft.zip" class="card h-100 shadow bg-dark text-decoration-none text-light d-block" target="_blank">
-                            <div class="card-body">
-                                <h5 class="card-title text-light">ЕГЭ Minecraft Edition</h5>
-                                <p class="card-text text-secondary">Вариант ЕГЭ по тематике игры Minecraft<br>(Нажмите, чтобы скачать)</p>
+                        <a href="/files/mathbank.pdf" class="card glass-card download-card text-decoration-none" target="_blank">
+                            <div class="card-body d-flex align-items-center">
+                                <i class="bi bi-file-earmark-pdf-fill fs-1 me-3 text-danger"></i>
+                                <div>
+                                    <h5 class="card-title">Банк задачек по математике</h5>
+                                    <p class="card-text">Самые отмороженные задачи в мире (Нажмите, чтобы скачать)</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <a href="/files/minecraft_ege.zip" class="card glass-card download-card text-decoration-none" target="_blank">
+                            <div class="card-body d-flex align-items-center">
+                                <i class="bi bi-file-earmark-zip-fill fs-1 me-3 text-warning"></i>
+                                <div>
+                                    <h5 class="card-title">ЕГЭ Minecraft Edition</h5>
+                                    <p class="card-text">Вариант ЕГЭ по тематике игры Minecraft (Нажмите, чтобы скачать)</p>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -76,7 +111,9 @@
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Анимация текста (без изменений) -->
     <script>
         var data = ['Математик', 'Java-разработчик', 'Плагины для Minecraft любой сложности', 'Люблю математику и Minecraft', 'Взорву интернет своими идеями',
             'Самый главный говнокодер', 'Решаю параметры закрытыми глазами', 'Планиметрия one love', 'Немного знаю Python', 'Фанат Шпиониро Голубиро', 'Фанат Трипи Тропи', 'Говнокодю мусорку',

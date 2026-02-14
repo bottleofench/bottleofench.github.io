@@ -1,45 +1,170 @@
 @font-face {
-  font-family: "DrukCyr";
-  src: url("fonts/DrukCyr_Medium.ttf");
+    font-family: "DrukCyr";
+    src: url("fonts/DrukCyr_Medium.ttf");
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("fonts/Gilroy-ExtraBold.otf");
+    font-family: "Gilroy";
+    src: url("fonts/Gilroy-ExtraBold.otf");
 }
 
-.text-shadow-custom {
-    color: white;
-    font-family: DrukCyr;
-    text-shadow: -2px 2px #8a2be2,
-               -4px 4px #4b0082,
-               -6px 6px #2e0854,
-               -8px 8px #1a0333,
-               -10px 10px #0d011a;
+:root {
+    --bg-dark: #0b0d10;
+    --card-bg: rgba(20, 25, 30, 0.8);
+    --primary: #a855f7;
+    --primary-glow: rgba(168, 85, 247, 0.3);
+    --text-light: #f5f5f5;
+    --text-secondary: #cbd5e1;
+    --glass-border: rgba(255, 255, 255, 0.05);
 }
 
 body {
-    background-color: #212529;
+    background: radial-gradient(circle at 10% 20%, #1a1f2e, var(--bg-dark));
+    color: var(--text-light);
+    font-family: 'Inter', 'Gilroy', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
+/* Аватар */
+.avatar-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(45deg, var(--primary), #3b82f6);
+    box-shadow: 0 0 30px var(--primary-glow);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--bg-dark);
+}
+
+/* Градиентный текст */
+.gradient-text {
+    font-family: 'DrukCyr', sans-serif;
+    background: linear-gradient(135deg, #fff, #c0b0ff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px var(--primary-glow);
+    letter-spacing: 2px;
+}
+
+/* Социальные иконки */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--glass-border);
+    color: var(--text-light);
+    font-size: 28px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--primary-glow);
+    border-color: transparent;
+}
+
+/* Заголовки секций */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    border-bottom: 2px solid rgba(168, 85, 247, 0.3);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Карточки (glassmorphism) */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-light);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--primary-glow);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.card-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.card-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Специально для карточек-ссылок (скачивание) */
+.download-card {
+    cursor: pointer;
+    text-align: left;
+}
+
+.download-card .card-body {
+    padding: 1.5rem;
+}
+
+.download-card i {
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* Анимация текста (без изменений) */
 .char {
     display: inline-block;
     opacity: 0;
 }
 
-.social-icon {
-    border: none !important;
-}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .avatar-wrapper {
+        width: 120px;
+        height: 120px;
+    }
 
-.lead, .card-title, .card-text, .text-light, .text-secondary {
-    font-family: 'Gilroy';
-}
+    .gradient-text {
+        font-size: 2.5rem;
+    }
 
-.card.bg-dark {
-    background-color: #343a40 !important;
-    border-color: #495057 !important;
-}
+    .section-title {
+        font-size: 2rem;
+    }
 
-.card-text.text-secondary {
-    color: #adb5bd !important;
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
 }
